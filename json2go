@@ -1,0 +1,41 @@
+package main
+
+
+import (
+        "encoding/json"
+        "fmt"
+        "io/ioutil"
+)
+
+
+type Package struct{
+    Name string `json:",omitempty"`
+    Version string `json:",omitempty"`
+    Release string `json:",omitempty"`
+    Epoch int `json:",omitempty"`
+    Arch string `json:",omitempty"`
+}
+
+type Class struct{
+    Pkgs []Package `json:"Pkgs"`
+}
+
+
+func main(){
+        var data Class
+
+        // 读取json文件内容 返回字节切片
+        str,_ := ioutil.ReadFile("test_data.json")
+
+        // 将字节切片映射到指定结构体上
+        json.Unmarshal([]byte(str),&data)
+
+        // 打印对象结构
+        fmt.Println(data)
+
+        // 循环所有学生的信息
+        //for idx,val := range data.Info{
+        //fmt.Printf("index: %v 学生名：%v,爱好: %v\n",idx,val.Name,val.Hobby)
+        //}
+
+}
