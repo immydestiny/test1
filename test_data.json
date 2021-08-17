@@ -1,0 +1,39 @@
+{
+  "Pkgs": [
+    {
+      "Release": "102.1.git7f2769b.el7",
+      "Epoch": 2,
+      "Version": "1.13.1",
+      "Arch": "x86_64",
+      "Name": "docker"
+    },
+    {
+      "Release": "102.1.git7f2769b.el7",
+      "Epoch": 2,
+      "Version": "1.13.1",
+      "Arch": "x86_64",
+      "Name": "docker-common"
+    },
+    {
+      "Release": "102.1.git7f2769b.el7",
+      "Epoch": 2,
+      "Version": "1.13.1",
+      "Arch": "x86_64",
+      "Name": "docker-logrotate"
+    },
+    {
+      "Release": "2.el7",
+      "Epoch": null,
+      "Version": "2.4.2.0",
+      "Arch": "noarch",
+      "Name": "ansible"
+    },
+    {
+      "Release": "1.el7_6",
+      "Epoch": null,
+      "Version": "4.0.9.2",
+      "Arch": "noarch",
+      "Name": "dnf"
+    }
+  ]
+}
