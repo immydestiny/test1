@@ -1,0 +1,9 @@
+{[{docker 1.13.1 102.1.git7f2769b.el7 2 x86_64} 
+{docker-common 1.13.1 102.1.git7f2769b.el7 2 x86_64} 
+{docker-logrotate 1.13.1 102.1.git7f2769b.el7 2 x86_64} 
+{ansible 2.4.2.0 2.el7 0 noarch} 
+{dnf 4.0.9.2 1.el7_6 0 noarch}]}
+
+
+null 会变成0  应该影响也不大
+
