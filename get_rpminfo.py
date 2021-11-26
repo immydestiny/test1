@@ -20,12 +20,13 @@ def get_rpminfo(rpm_file):
     rpminfo = {}
     ts = rpm.TransactionSet()
     ts.setVSFlags(rpm._RPMVSF_NOSIGNATURES |rpm._RPMVSF_NODIGESTS)
-    rpmhdr = ts.hdrFromFdno(rpm_file)
-    rpminfo["Name"] = rpmhdr["NAME"]
-    rpminfo["Version"] = rpmhdr["VERSION"]
-    rpminfo["Release"] = rpmhdr["RELEASE"]
-    rpminfo["Epoch"] = rpmhdr["Epoch"]
-    rpminfo["Arch"] = rpmhdr["Arch"]
+    if rpm_file.endswith('rpm'):
+        rpmhdr = ts.hdrFromFdno(rpm_file)
+        rpminfo["Name"] = rpmhdr["NAME"]
+        rpminfo["Version"] = rpmhdr["VERSION"]
+        rpminfo["Release"] = rpmhdr["RELEASE"]
+        rpminfo["Epoch"] = rpmhdr["Epoch"]
+        rpminfo["Arch"] = rpmhdr["Arch"]
     #print(rpminfo)
     return rpminfo
   
